@@ -12,6 +12,6 @@ class profile::base(
 	if $facts['os']['family'] == 'RedHat' {
 		include ::profile::selinux
 	}
-	class { '::rsyslog::client' }
+	class { '::rsyslog::client': }
 
 }
