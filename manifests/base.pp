@@ -16,6 +16,7 @@ class profile::base(
 
 	class { '::rsyslog::client':
     log_local  => true,
+		log_remote => false,
   }
 
 }
