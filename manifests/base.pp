@@ -12,6 +12,10 @@ class profile::base(
 	if $facts['os']['family'] == 'RedHat' {
 		include ::profile::selinux
 	}
-	notify { 'Test enviroment !!': }
+	notify { 'Production enviroment !!': }
+
+	class { '::rsyslog::client':
+    log_local  => true,
+  }
 
 }
